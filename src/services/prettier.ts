@@ -26,5 +26,5 @@ export async function hookPrettier(dryRun = false) {
 
   const spaces = 2;
   const patchedPack = JSON.stringify(userPackage, undefined, spaces);
-  await write(file, new Buffer(`${patchedPack}\n`));
+  await write(file, Buffer.from(`${patchedPack}\n`));
 }
