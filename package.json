@@ -6,9 +6,9 @@
     "type": "git",
     "url": "git+https://github.com/agencyenterprise/ae-bootstrap.git"
   },
-  "main": "src/index.js",
+  "main": "dist/src/index.js",
   "bin": {
-    "ae-bootstrap": "src/index.js"
+    "ae-bootstrap": "dist/src/index.js"
   },
   "scripts": {
     "clear": "rimraf dist",
