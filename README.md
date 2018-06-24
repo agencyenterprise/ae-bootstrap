@@ -2,12 +2,18 @@
 
 Adds basic configuration to Node / Angular / React projects.
 
+## Install
+
+```bash
+npm i -D https://github.com/agencyenterprise/ae-bootstrap
+```
+
 ## Usage
 
 ```bash
-ae-bootstrap node -init
-ae-bootstrap angular -init
-ae-bootstrap react -init
+npx ae-bootstrap node -init
+npx ae-bootstrap angular -init
+npx ae-bootstrap react -init
 ```
 
 ## Preview
