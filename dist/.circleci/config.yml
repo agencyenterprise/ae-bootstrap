@@ -1,0 +1,36 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.11.0-browsers
+    working_directory: ~/repo
+    environment:
+      NODE_ENV: test
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: npm i
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: npm run lint
+      - run: npm run test-ci
+
+      - deploy:
+          command: |
+            bash ./.circleci/add-ssh-hosts.sh
+            if [ "${CIRCLE_BRANCH}" == "development" ] || [ "${CIRCLE_BRANCH}" == "master" ]; then
+              git remote -v
+              bash ./.circleci/install-packages.sh
+              bash ./.circleci/deploy-heroku.sh $CIRCLE_BRANCH
+            fi
