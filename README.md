@@ -12,4 +12,14 @@ ae-bootstrap react -init
 
 ## Preview
 
-![node-angular-react](./screenshots/node-angular-react.png)
+### Node
+
+[![node](./screenshots/node.png)](./screenshots/node.png)
+
+### Angular
+
+[![angular](./screenshots/angular.png)](./screenshots/angular.png)
+
+### React
+
+[![react](./screenshots/react.png)](./screenshots/react.png)
