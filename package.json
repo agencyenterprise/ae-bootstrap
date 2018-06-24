@@ -12,7 +12,7 @@
   },
   "scripts": {
     "clear": "rimraf dist",
-    "build": "tsc && npm run copyfiles",
+    "build": "npm run clear && tsc && npm run copyfiles",
     "build-watch": "tsc -w",
     "copyfiles": "npm run copyfiles-git && npm run copyfiles-tslint && npm run copyfiles-format && npm run copyfiles-circleci",
     "copyfiles-git": "copyfiles .gitignore-* .github/**/*.* ./dist",
