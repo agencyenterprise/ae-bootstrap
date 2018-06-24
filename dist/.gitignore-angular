@@ -1,6 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
+/dist
 /tmp
 /out-tsc
 /build
@@ -41,10 +42,6 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-
-# e2e
-/e2e/*.js
-/e2e/*.map
 
 # System Files
 .DS_Store

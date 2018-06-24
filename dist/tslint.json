@@ -1,0 +1,6 @@
+{
+  "extends": "tslint-config-codingwise",
+  "rules": {
+    "no-console": false
+  }
+}

@@ -6,13 +6,13 @@
     "type": "git",
     "url": "git+https://github.com/agencyenterprise/ae-bootstrap.git"
   },
-  "main": "src/index.js",
+  "main": "dist/src/index.js",
   "bin": {
-    "ae-bootstrap": "src/index.js"
+    "ae-bootstrap": "dist/src/index.js"
   },
   "scripts": {
     "clear": "rimraf dist",
-    "build": "tsc && npm run copyfiles",
+    "build": "npm run clear && tsc && npm run copyfiles",
     "build-watch": "tsc -w",
     "copyfiles": "npm run copyfiles-git && npm run copyfiles-tslint && npm run copyfiles-format && npm run copyfiles-circleci",
     "copyfiles-git": "copyfiles .gitignore-* .github/**/*.* ./dist",
