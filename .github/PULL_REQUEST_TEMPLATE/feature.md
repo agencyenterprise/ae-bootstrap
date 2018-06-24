@@ -6,7 +6,7 @@ about: Create a request to include a new feature
 
 # Feature
 
-https://www.pivotaltracker.com/story/show/#########
+References #<ID>
 
 # Tests
 

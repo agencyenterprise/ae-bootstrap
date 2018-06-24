@@ -6,7 +6,7 @@ about: Create a request to include a new chore
 
 # Chore
 
-https://www.pivotaltracker.com/story/show/#########
+References #<ID>
 
 # Tests
 

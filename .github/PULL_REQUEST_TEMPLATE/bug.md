@@ -6,7 +6,7 @@ about: Create a request to fix a bug
 
 # Bug
 
-https://www.pivotaltracker.com/story/show/#########
+References #<ID>
 
 ## Before fix
 
