@@ -1,7 +1,7 @@
 import colors from 'colors';
 import * as path from 'path';
 
-import { install, runLint, runPrettier } from '../services/exec';
+import { initGit, install, runLint, runPrettier } from '../services/exec';
 import { copyDir, read, write } from '../services/file';
 import { hookPrettier } from '../services/prettier';
 
@@ -20,6 +20,7 @@ export async function init(type: 'node' | 'angular' | 'react', { dryRun }: any) 
     await copyDir(path.join(__dirname, '../../.github'), path.resolve('.github'), dryRun);
     await copyDir(path.join(__dirname, '../../.circleci'), path.resolve('.circleci'), dryRun);
 
+    await initGit(dryRun);
     await install('tslint-config-codingwise', '-D', dryRun);
     await install('lint-staged', '-D', dryRun);
     await install('husky@next', '-D', dryRun);

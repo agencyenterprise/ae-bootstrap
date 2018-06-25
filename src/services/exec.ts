@@ -66,3 +66,17 @@ export async function runLint(type, dryRun = false) {
     console.log(colors.red('LINT RESULT'), error.stdout);
   }
 }
+
+export async function initGit(dryRun = false) {
+  console.info(colors.green('INIT GIT'));
+
+  if (dryRun) {
+    return Promise.resolve();
+  }
+
+  const hasGit = await exists(path.resolve('.git'));
+
+  if (!hasGit) {
+    await exec('git init');
+  }
+}
