@@ -38,6 +38,7 @@ function init(type, { dryRun }) {
             yield copyFile(`../../.gitignore-${type}`, '.gitignore', dryRun);
             yield file_1.copyDir(path.join(__dirname, '../../.github'), path.resolve('.github'), dryRun);
             yield file_1.copyDir(path.join(__dirname, '../../.circleci'), path.resolve('.circleci'), dryRun);
+            yield exec_1.initGit(dryRun);
             yield exec_1.install('tslint-config-codingwise', '-D', dryRun);
             yield exec_1.install('lint-staged', '-D', dryRun);
             yield exec_1.install('husky@next', '-D', dryRun);

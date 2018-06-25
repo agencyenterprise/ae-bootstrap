@@ -81,4 +81,17 @@ function runLint(type, dryRun = false) {
     });
 }
 exports.runLint = runLint;
+function initGit(dryRun = false) {
+    return __awaiter(this, void 0, void 0, function* () {
+        console.info(colors_1.default.green('INIT GIT'));
+        if (dryRun) {
+            return Promise.resolve();
+        }
+        const hasGit = yield file_1.exists(path.resolve('.git'));
+        if (!hasGit) {
+            yield exec('git init');
+        }
+    });
+}
+exports.initGit = initGit;
 //# sourceMappingURL=exec.js.map
