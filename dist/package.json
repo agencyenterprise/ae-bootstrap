@@ -8,7 +8,10 @@
     },
     "main": "dist/src/index.js",
     "bin": {
-        "ae-bootstrap": "dist/src/index.js"
+        "ae-bootstrap": "dist/src/index.js",
+        "ae-bootstrap-node": "dist/src/index-node.js",
+        "ae-bootstrap-angular": "dist/src/index-angular.js",
+        "ae-bootstrap-react": "dist/src/index-react.js"
     },
     "scripts": {
         "clear": "rimraf dist",
